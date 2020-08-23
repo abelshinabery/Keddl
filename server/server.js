@@ -43,6 +43,6 @@ async function getTea(req, res) {
 	})
 }
 
-app.listen(port, () => {
+app.listen(process.env.PORT || { port }, () => {
 	console.log(`App listening at http://localhost:${port}`);
 });

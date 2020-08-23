@@ -22,7 +22,6 @@ module.exports = {
 		}
 	},
 	plugins: [
-		// new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
 		new HtmlWebpackPlugin ({
 			template: 'src/index.html',
 			filename: 'index.html'
