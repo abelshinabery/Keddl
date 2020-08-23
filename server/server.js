@@ -6,7 +6,7 @@ const teaSchema = require('./teaSchema.js');
 const Tea = mongoose.model('tea', teaSchema, 'tea');
 
 const path = require('path');
-const connectionString = `mongodb+srv://api:pnXpGulSBWcUXtK5@cluster0.oqv19.mongodb.net/keddl?retryWrites=true&w=majority`
+const connectionString = process.env.CONN_STRING;
 const port = 4000;
 
 
