@@ -1,0 +1,163 @@
+@import './imports'
+
+html
+	height: 100vh
+	font-size: 16px
+	line-height: 1.5
+
+body
+	min-height: 100%
+	background: #fff
+	font-family: $bodyFont
+	font-weight: 400
+
+#root, #app
+	height: 100vh
+
+#app 
+	display: flex
+	flex-direction: column
+
+	#header
+		display: flex
+		flex: 0 0 6rem
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		// background: $matcha
+		box-shadow: 0px 1px 6px $lightGray
+
+		.logo
+			font-family: $logoFont
+			font-size: 3rem
+			color: $matcha
+
+	#teaContainer
+		flex: 1
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 3em
+		max-width: 100%
+
+		.teaInfo
+			flex: 0 0 90%
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			margin-bottom: 3rem
+
+			.teaName
+				font-family: $logoFont
+				text-transform: capitalize
+				margin-top: 1rem
+				height: 1.5rem
+				font-size: 2rem
+				padding: 2rem 0
+				font-weight: 700
+				order: 1
+
+			.teaPicture
+				flex: 0 0 auto
+				height: auto
+				width: 30em
+				max-width: 100%
+				margin-bottom: 0 0 1.5em 0
+				order: 2
+
+			.teaCaffeine
+				padding: 1rem
+				height: 1rem
+				border-radius: 10px
+				order: 3
+
+			.teaBlurb
+				display: flex
+				align-items: flex-start
+				height: 15rem
+				margin-top: 1.5rem;
+				text-align: justify
+				order: 4
+
+	#footer
+		flex: 0 0 2em
+		background: $lightGray
+		display: flex
+		align-items: center
+		justify-content: center
+
+		small
+			font-size: 12px
+
+
+.lds-ripple 
+  display: inline-block
+  position: relative
+  width: 80px
+  height: 80px
+
+.lds-ripple div 
+  position: absolute
+  border: 4px solid $matcha
+  opacity: 1
+  border-radius: 50%
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite
+
+.lds-ripple div:nth-child(2) 
+  animation-delay: -0.5s
+
+@keyframes lds-ripple 
+  0% 
+    top: 36px
+    left: 36px
+    width: 0
+    height: 0
+    opacity: 1
+  
+  100% 
+    top: 0px
+    left: 0px
+    width: 72px
+    height: 72px
+    opacity: 0
+
+.hidden
+	display: none
+
+
+  
+
+
+
+
+
+@media only screen and (min-width: 768px)
+	#app
+		#teaContainer
+			.teaInfo
+				flex-direction: row
+				justify-content: space-around
+
+				.teaName
+					text-align: center
+					flex: 0 0 100%
+
+				.teaPicture
+					order: 3
+					flex: 0 0 40%
+
+				.teaCaffeine
+					text-align: center
+					order: 2
+					flex: 0 0 100%
+					align-self: flex-start
+					margin-right: auto
+
+				.teaBlurb
+					flex: 0 0 40% 
+					text-align: left
+			
+	
+
